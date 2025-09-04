@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# production
+.next/
+out/
+
+# testing
+coverage/
+
+# misc
+.DS_Store
+*.log
+
+# env
+.env
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
+
