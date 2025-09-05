@@ -12,8 +12,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
         <header className="border-b bg-white">
           <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
-            <a href="/" className="text-xl font-semibold">Online Store</a>
-            <a href="/cart" className="text-sm font-medium hover:underline">Cart</a>
+            <a href="/" className="text-xl font-semibold text-brand-700">Online Store</a>
+            <a href="/cart" className="text-sm font-medium text-brand-600 hover:underline">Cart</a>
           </div>
         </header>
         <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>

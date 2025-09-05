@@ -66,7 +66,7 @@ export default function CartPage() {
             <div className="font-semibold">Total</div>
             <div>${total.toFixed(2)}</div>
           </div>
-          <button onClick={checkout} className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 self-end">Checkout</button>
+          <button onClick={checkout} className="rounded bg-brand-600 px-4 py-2 text-white hover:bg-brand-700 self-end">Checkout</button>
         </div>
       )}
     </div>

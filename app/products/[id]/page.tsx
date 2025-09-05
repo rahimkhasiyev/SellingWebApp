@@ -27,7 +27,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
           <AddButton id={product.id} name={product.name} price={product.price} imageUrl={product.imageUrl ?? undefined} />
         </div>
         <div className="mt-4">
-          <Link href="/" className="text-sm text-blue-600 hover:underline">Back to products</Link>
+          <Link href="/" className="text-sm text-brand-600 hover:underline">Back to products</Link>
         </div>
       </div>
     </div>
