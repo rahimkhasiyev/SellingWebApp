@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+  migrate:
+    build: .
+    command: sh -c "npm run prisma:generate && npm run db:push && npm run db:seed"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:./data/dev.db
+      - NEXT_PUBLIC_BASE_URL=http://localhost:3000
+    volumes:
+      - db-data:/app/data
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:./data/dev.db
+      - NEXT_PUBLIC_BASE_URL=http://localhost:3000
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    volumes:
+      - db-data:/app/data
+volumes:
+  db-data:
+
